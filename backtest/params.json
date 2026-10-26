@@ -1,0 +1,1 @@
+{"h_take_size": 10, "h_make_edge": 1, "h_make_size": 5, "f_hist_len": 100, "f_min_hist": 30, "f_min_std": 2, "f_max_pos": 20, "f_reduce_size": 5, "f_trade_size": 2, "f_z_entry": 3.0, "o_t": 0.1, "o_atm_filter": 150, "o_cross_edge": 2, "o_inv_adj": 0.1, "o_single_edge": 5, "o_single_size": 2, "o_hedge_mult": -0.5, "o_hedge_thr": 20, "o_hedge_max": 15}

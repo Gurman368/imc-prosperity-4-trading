@@ -1,0 +1,893 @@
+[
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 229582,
+    "worst": -2315,
+    "score": 228424.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 221926,
+    "worst": -2964,
+    "score": 220444.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 221630,
+    "worst": -3325,
+    "score": 219967.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 221574,
+    "worst": -3357,
+    "score": 219895.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 214148,
+    "worst": -3872,
+    "score": 212212.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 213326,
+    "worst": -4064,
+    "score": 211294.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 211966,
+    "worst": -3741,
+    "score": 210095.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 205184,
+    "worst": -6086,
+    "score": 202141.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 14
+    },
+    "total": 198204,
+    "worst": -12453,
+    "score": 191977.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 174260,
+    "worst": 7397,
+    "score": 177958.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 166604,
+    "worst": 6748,
+    "score": 169978.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 166308,
+    "worst": 6387,
+    "score": 169501.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 166252,
+    "worst": 6355,
+    "score": 169429.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 158880,
+    "worst": 15464,
+    "score": 166612.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 158826,
+    "worst": 5840,
+    "score": 161746.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 158004,
+    "worst": 5648,
+    "score": 160828.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 156644,
+    "worst": 5971,
+    "score": 159629.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 151225,
+    "worst": 14815,
+    "score": 158632.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 150929,
+    "worst": 14454,
+    "score": 158156.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 150872,
+    "worst": 14422,
+    "score": 158083.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 150068,
+    "worst": 9929,
+    "score": 155032.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 148009,
+    "worst": 9207,
+    "score": 152612.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 149862,
+    "worst": 3626,
+    "score": 151675.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 143448,
+    "worst": 13907,
+    "score": 150401.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 142625,
+    "worst": 13715,
+    "score": 149482.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 141264,
+    "worst": 14038,
+    "score": 148283.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 142412,
+    "worst": 9280,
+    "score": 147052.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 142116,
+    "worst": 8919,
+    "score": 146575.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 142060,
+    "worst": 8887,
+    "score": 146503.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 140352,
+    "worst": 7444,
+    "score": 144074.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 140056,
+    "worst": 7664,
+    "score": 143888.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 140001,
+    "worst": 7664,
+    "score": 143833.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 14
+    },
+    "total": 142882,
+    "worst": -2741,
+    "score": 141511.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 134483,
+    "worst": 11693,
+    "score": 140329.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 134634,
+    "worst": 8372,
+    "score": 138820.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 133812,
+    "worst": 8180,
+    "score": 137902.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 132452,
+    "worst": 8503,
+    "score": 136703.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 132575,
+    "worst": 5974,
+    "score": 135562.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 131752,
+    "worst": 5920,
+    "score": 134712.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 130393,
+    "worst": 5166,
+    "score": 132976.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 11
+    },
+    "total": 127503,
+    "worst": 5326,
+    "score": 130166.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 125670,
+    "worst": 6158,
+    "score": 128749.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 123612,
+    "worst": 5436,
+    "score": 126330.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 11
+    },
+    "total": 118690,
+    "worst": -209,
+    "score": 118585.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 11
+    },
+    "total": 116632,
+    "worst": -931,
+    "score": 116166.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 60299,
+    "worst": -1140,
+    "score": 59729.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 58020,
+    "worst": -730,
+    "score": 57655.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 52644,
+    "worst": -2904,
+    "score": 51192.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 52348,
+    "worst": -2684,
+    "score": 51006.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 52291,
+    "worst": -2686,
+    "score": 50948.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 50363,
+    "worst": -1380,
+    "score": 49673.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 50068,
+    "worst": -1740,
+    "score": 49198.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 50012,
+    "worst": -1772,
+    "score": 49126.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 44865,
+    "worst": -4374,
+    "score": 42678.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 44044,
+    "worst": -4428,
+    "score": 41830.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 42584,
+    "worst": -2288,
+    "score": 41440.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 41763,
+    "worst": -2480,
+    "score": 40523.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 42683,
+    "worst": -5184,
+    "score": 40091.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 40404,
+    "worst": -2156,
+    "score": 39326.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 35900,
+    "worst": -1321,
+    "score": 35239.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 33620,
+    "worst": -4502,
+    "score": 31369.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.005,
+      "fruit_dev": 8
+    },
+    "total": 28920,
+    "worst": -7688,
+    "score": 25076.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 14
+    },
+    "total": 26641,
+    "worst": -10868,
+    "score": 21207.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": 9510,
+    "worst": -28196,
+    "score": -4588.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": 3859,
+    "worst": -18010,
+    "score": -5146.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": 1854,
+    "worst": -29961,
+    "score": -13126.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": 1558,
+    "worst": -29741,
+    "score": -13312.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": 1502,
+    "worst": -29742,
+    "score": -13369.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -3796,
+    "worst": -19774,
+    "score": -13683.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -4092,
+    "worst": -19554,
+    "score": -13869.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 13,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -4149,
+    "worst": -19556,
+    "score": -13927.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": -5924,
+    "worst": -31431,
+    "score": -21639.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.005,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -11575,
+    "worst": -21244,
+    "score": -22197.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": -6746,
+    "worst": -31485,
+    "score": -22488.5
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -12396,
+    "worst": -21298,
+    "score": -23045.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": -8106,
+    "worst": -32240,
+    "score": -24226.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 10,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -13757,
+    "worst": -22054,
+    "score": -24784.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": -14888,
+    "worst": -27814,
+    "score": -28795.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.01,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -20540,
+    "worst": -17628,
+    "score": -29354.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.02,
+      "fruit_dev": 8
+    },
+    "total": -21868,
+    "worst": -26362,
+    "score": -35049.0
+  },
+  {
+    "params": {
+      "hydro_ema": 0.02,
+      "hydro_dev": 16,
+      "fruit_ema": 0.01,
+      "fruit_dev": 8
+    },
+    "total": -27520,
+    "worst": -16176,
+    "score": -35608.0
+  }
+]

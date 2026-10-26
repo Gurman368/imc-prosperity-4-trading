@@ -1,0 +1,17 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# IMC Prosperity Data & Logs (Crucial to ignore huge CSVs)
+backtest/data/*.csv
+backtest/logs/*.log
+*.log
+
+# OS & IDEs
+.DS_Store
+.vscode/
+.idea/
+.Rproj.user

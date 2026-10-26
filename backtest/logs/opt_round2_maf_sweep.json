@@ -1,0 +1,66 @@
+{
+  "strategy": "C:\\Users\\rajy7\\OneDrive\\Documents\\GitHub\\Imc_prosperity4_ISI_BSDS\\backtest\\strategies\\r2trader.py",
+  "data_dir": "C:\\Users\\rajy7\\OneDrive\\Documents\\GitHub\\Imc_prosperity4_ISI_BSDS\\backtest\\data",
+  "days": [
+    "2"
+  ],
+  "baseline_total_profit": 300420.0,
+  "results": [
+    {
+      "maf_bid": 0,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300420.0
+    },
+    {
+      "maf_bid": 25,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300395.0
+    },
+    {
+      "maf_bid": 50,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300370.0
+    },
+    {
+      "maf_bid": 75,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300345.0
+    },
+    {
+      "maf_bid": 100,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300320.0
+    },
+    {
+      "maf_bid": 150,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300270.0
+    },
+    {
+      "maf_bid": 200,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300220.0
+    },
+    {
+      "maf_bid": 300,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 300120.0
+    },
+    {
+      "maf_bid": 500,
+      "backtest_total_profit": 300420.0,
+      "net_if_paid_once": 299920.0
+    }
+  ],
+  "best_by_backtest_total": {
+    "maf_bid": 0,
+    "backtest_total_profit": 300420.0,
+    "net_if_paid_once": 300420.0
+  },
+  "best_by_conservative_net_if_paid_once": {
+    "maf_bid": 0,
+    "backtest_total_profit": 300420.0,
+    "net_if_paid_once": 300420.0
+  },
+  "note": "Prosperity backtester does not simulate MAF contract win logic or extra 25% quotes."
+}

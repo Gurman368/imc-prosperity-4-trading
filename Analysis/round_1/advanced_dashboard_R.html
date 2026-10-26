@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<link href="lib/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="lib/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="lib/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="lib/datatables-binding-0.33/datatables.js"></script>
+<script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="lib/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="lib/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="lib/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="lib/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="lib/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <title>Round 1 Advanced Market Microstructure Dashboard</title>
+  <style>body{font-family:Segoe UI,Arial,sans-serif;max-width:1600px;margin:0 auto;padding:20px;} h1{margin-bottom:8px;} .subtitle{color:#4d5d75;}</style>
+</head>
+<body>
+<h1>Round 1 Advanced Dashboard (R + Plotly)</h1>
+<p class="subtitle">Built from generated CSVs in analysis_outputs. Early 20% region is highlighted for regime diagnostics.</p>
+<h2>Global tables</h2>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-cb2847702db5be2c394e" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-cb2847702db5be2c394e">{"x":{"filter":"none","vertical":false,"caption":"<caption>Period summary (early/mid/late)<\/caption>","data":[["ASH_COATED_OSMIUM","ASH_COATED_OSMIUM","ASH_COATED_OSMIUM","INTARIAN_PEPPER_ROOT","INTARIAN_PEPPER_ROOT","INTARIAN_PEPPER_ROOT"],["early","late","mid","early","late","mid"],[6000,6000,18000,6000,6000,18000],[9983.072,9990.150083333334,9982.043583333334,10282.77691666667,12678.87191666667,11478.09830555556],[null,null,null,null,null,null],[16.14000725426188,16.17033165104542,16.18857797611868,11.77457903313417,14.31260111450656,13.04571738344778],[60.1035,60.59316666666667,60.21461111111111,48.24716666666666,48.4305,48.38861111111111],[-0.001934631478241307,0.002084600029105561,-0.002314476119695479,-0.004644713222318265,-0.0003207341252224892,-0.00349838819472101],[4041,3838,11900,3096,3148,9446],[765,752,2278,586,618,1829]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>product<\/th>\n      <th>session_period<\/th>\n      <th>rows<\/th>\n      <th>mean_mid<\/th>\n      <th>mid_volatility<\/th>\n      <th>mean_spread<\/th>\n      <th>mean_depth<\/th>\n      <th>mean_obi<\/th>\n      <th>trade_qty<\/th>\n      <th>trade_count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[2,3,5,6,7,8,9]},{"name":"product","targets":0},{"name":"session_period","targets":1},{"name":"rows","targets":2},{"name":"mean_mid","targets":3},{"name":"mid_volatility","targets":4},{"name":"mean_spread","targets":5},{"name":"mean_depth","targets":6},{"name":"mean_obi","targets":7},{"name":"trade_qty","targets":8},{"name":"trade_count","targets":9}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<br/>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-a3a58efb424a903424aa" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a3a58efb424a903424aa">{"x":{"filter":"none","vertical":false,"caption":"<caption>Trend regressions (expected functions)<\/caption>","data":[["product","ASH_COATED_OSMIUM","ASH_COATED_OSMIUM","INTARIAN_PEPPER_ROOT","INTARIAN_PEPPER_ROOT"],["model_name","OLS","Theil-Sen","OLS","Theil-Sen"],["intercept","9980.17001883145","10000.5","10972.164167913208","10997.55"],["slope","7.401835854018365e-06","0.0","0.0010141505792315058","0.001"],["r2","2.7992322140568682e-05","-0.0016954936947863875","0.08689163233273689","0.0865347847706256"],["stderr","8.077328711978556e-06","403.8586236506684","1.8981410259920583e-05","949.0476633008328"],["equation","mid_price(t) = 9980.170019 + (0.00000740) * t + noise","mid_price(t) = 10000.500000 + (0.00000000) * t + robust_noise","mid_price(t) = 10972.164168 + (0.00101415) * t + noise","mid_price(t) = 10997.550000 + (0.00100000) * t + robust_noise"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>V1<\/th>\n      <th>V2<\/th>\n      <th>V3<\/th>\n      <th>V4<\/th>\n      <th>V5<\/th>\n      <th>V6<\/th>\n      <th>V7<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"columnDefs":[{"name":"V1","targets":0},{"name":"V2","targets":1},{"name":"V3","targets":2},{"name":"V4","targets":3},{"name":"V5","targets":4},{"name":"V6","targets":5},{"name":"V7","targets":6}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<br/>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0edb5137ad7894a26395" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0edb5137ad7894a26395">{"x":{"filter":"none","vertical":false,"caption":"<caption>Microstructure regression coefficients<\/caption>","data":[["product","ASH_COATED_OSMIUM","INTARIAN_PEPPER_ROOT"],["samples","27643","27687"],["r2","0.00010688241624379202","0.00022759012007944612"],["beta_intercept","-0.0006660282100981076","-0.003550028615357159"],["beta_obi_top","1.8012738050699969e-06","0.001191787921131231"],["beta_spread_1","3.1337729622243484e-05","0.00010365354851360145"],["beta_depth_top","-2.2232081599875392e-05","6.561472888743985e-06"],["beta_signed_trade_qty","-9.747581801979738e-05","-0.0002868006576570839"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>V1<\/th>\n      <th>V2<\/th>\n      <th>V3<\/th>\n      <th>V4<\/th>\n      <th>V5<\/th>\n      <th>V6<\/th>\n      <th>V7<\/th>\n      <th>V8<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"columnDefs":[{"name":"V1","targets":0},{"name":"V2","targets":1},{"name":"V3","targets":2},{"name":"V4","targets":3},{"name":"V5","targets":4},{"name":"V6","targets":5},{"name":"V7","targets":6},{"name":"V8","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<hr/>
+</body>
+</html>

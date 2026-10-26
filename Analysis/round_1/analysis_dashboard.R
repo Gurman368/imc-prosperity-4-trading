@@ -1,0 +1,174 @@
+# Advanced interactive dashboard from generated CSV analysis artifacts
+# Usage:
+#   Rscript Analysis/round_1/analysis_dashboard.R
+
+required_packages <- c("readr", "dplyr", "plotly", "htmltools", "htmlwidgets", "DT", "scales")
+missing <- required_packages[!sapply(required_packages, requireNamespace, quietly = TRUE)]
+if (length(missing) > 0) {
+  install.packages(missing, repos = "https://cloud.r-project.org")
+}
+
+library(readr)
+library(dplyr)
+library(plotly)
+library(htmltools)
+library(htmlwidgets)
+library(DT)
+library(scales)
+
+
+prices <- read.csv("~/GitHub/Imc_prosperity4_ISI_BSDS/Analysis/round_1/analysis_outputs/enriched_prices_with_flow.csv", header=FALSE)
+trend <- read.csv("~/GitHub/Imc_prosperity4_ISI_BSDS/Analysis/round_1/analysis_outputs/trend_regressions.csv", header=FALSE)
+period <- read.csv("~/GitHub/Imc_prosperity4_ISI_BSDS/Analysis/round_1/analysis_outputs/period_summary.csv")
+micro <- read.csv("~/GitHub/Imc_prosperity4_ISI_BSDS/Analysis/round_1/analysis_outputs/microstructure_regressions.csv", header=FALSE)
+
+# Ensure numeric fields
+num_cols <- c("timestamp", "mid_price", "obi_top", "spread_1", "depth_top", "next_mid_return", "trade_qty", "trade_count")
+for (nc in num_cols) {
+  if (nc %in% names(prices)) prices[[nc]] <- suppressWarnings(as.numeric(prices[[nc]]))
+}
+
+products <- sort(unique(prices$product))
+
+make_product_panel <- function(prod) {
+  d <- prices %>% filter(product == prod) %>% arrange(day, timestamp)
+
+  if (nrow(d) == 0) {
+    return(div(h3(prod), p("No data")))
+  }
+
+  # x-axis index for stable plotting over multiple days
+  d <- d %>% mutate(obs = row_number())
+
+  # Regression lines from csv
+  tr <- trend %>% filter(product == prod)
+  ols <- tr %>% filter(model_name == "OLS")
+  ts <- tr %>% filter(model_name == "Theil-Sen")
+
+  y_ols <- if (nrow(ols) > 0) ols$intercept[1] + ols$slope[1] * d$timestamp else rep(NA_real_, nrow(d))
+  y_ts <- if (nrow(ts) > 0) ts$intercept[1] + ts$slope[1] * d$timestamp else rep(NA_real_, nrow(d))
+
+  early_cut <- max(1, floor(nrow(d) * 0.2))
+
+  p1 <- plot_ly(d, x = ~obs, y = ~mid_price, type = "scatter", mode = "lines", name = "Mid Price", line = list(color = "#1f77b4")) %>%
+    add_lines(y = ~y_ols, name = "OLS", line = list(color = "#ff7f0e", dash = "dash")) %>%
+    add_lines(y = ~y_ts, name = "Theil-Sen", line = list(color = "#2ca02c", dash = "dot")) %>%
+    layout(
+      title = paste0(prod, " — Mid Price with Expected Function"),
+      xaxis = list(title = "Observation Index"),
+      yaxis = list(title = "Price"),
+      shapes = list(
+        list(type = "rect", xref = "x", yref = "paper", x0 = 1, x1 = early_cut,
+             y0 = 0, y1 = 1, fillcolor = "rgba(255,127,80,0.15)", line = list(width = 0))
+      ),
+      annotations = list(
+        list(x = max(2, early_cut / 2), y = 1.05, xref = "x", yref = "paper",
+             text = "Early 20% regime", showarrow = FALSE, font = list(size = 11, color = "#aa3a00"))
+      )
+    )
+
+  p2 <- plot_ly(d, x = ~obs, y = ~obi_top, type = "scatter", mode = "lines", name = "OBI", line = list(color = "#9467bd")) %>%
+    add_lines(y = ~spread_1, name = "Spread", yaxis = "y2", line = list(color = "#d62728", width = 1)) %>%
+    layout(
+      title = paste0(prod, " — OBI & Spread"),
+      xaxis = list(title = "Observation Index"),
+      yaxis = list(title = "OBI", zeroline = TRUE),
+      yaxis2 = list(title = "Spread", overlaying = "y", side = "right", showgrid = FALSE),
+      shapes = list(
+        list(type = "line", x0 = 1, x1 = nrow(d), y0 = 0.15, y1 = 0.15, line = list(color = "gray", dash = "dash")),
+        list(type = "line", x0 = 1, x1 = nrow(d), y0 = -0.15, y1 = -0.15, line = list(color = "gray", dash = "dash"))
+      )
+    )
+
+  p3_data <- d %>% filter(!is.na(obi_top), !is.na(next_mid_return))
+  p3 <- plot_ly(
+    p3_data, x = ~obi_top, y = ~next_mid_return,
+    type = "scatter", mode = "markers",
+    marker = list(size = 5, color = "rgba(31,119,180,0.45)"),
+    name = "Points"
+  ) %>%
+    layout(
+      title = paste0(prod, " — Predictive Check: OBI vs Next Return"),
+      xaxis = list(title = "OBI"),
+      yaxis = list(title = "Next Mid Return")
+    )
+
+  # Compact KPI cards
+  tr_txt <- tr %>%
+    mutate(txt = paste0(model_name, ": ", equation, " | R²=", sprintf("%.4f", r2))) %>%
+    pull(txt)
+
+  micro_row <- micro %>% filter(product == prod)
+  micro_txt <- if (nrow(micro_row) > 0) {
+    paste0(
+      "Micro model R²=", sprintf("%.6f", micro_row$r2[1]),
+      " | β_OBI=", sprintf("%.6f", micro_row$beta_obi_top[1]),
+      " | β_spread=", sprintf("%.6f", micro_row$beta_spread_1[1]),
+      " | β_depth=", sprintf("%.6f", micro_row$beta_depth_top[1]),
+      " | β_signed_flow=", sprintf("%.6f", micro_row$beta_signed_trade_qty[1])
+    )
+  } else {
+    "Micro model not available"
+  }
+
+  card <- div(
+    style = "background:#f7f9fc;border:1px solid #d9e1ee;border-radius:10px;padding:10px 14px;margin:8px 0;",
+    h4(style = "margin:0 0 8px 0;", paste0(prod, " model summary")),
+    tags$ul(style = "margin:0 0 6px 18px;", lapply(tr_txt, function(x) tags$li(x))),
+    p(style = "margin:6px 0 0 0;font-weight:600;", micro_txt)
+  )
+
+  div(
+    h2(style = "margin-top:28px;", prod),
+    card,
+    subplot(p1, p2, p3, nrows = 3, shareX = FALSE, titleY = TRUE, margin = 0.05) %>%
+      layout(height = 1200, showlegend = TRUE)
+  )
+}
+
+# Global summary tables
+period_tbl <- datatable(
+  period,
+  options = list(pageLength = 12, scrollX = TRUE),
+  rownames = FALSE,
+  caption = "Period summary (early/mid/late)"
+)
+
+trend_tbl <- datatable(
+  trend,
+  options = list(pageLength = 10, scrollX = TRUE),
+  rownames = FALSE,
+  caption = "Trend regressions (expected functions)"
+)
+
+micro_tbl <- datatable(
+  micro,
+  options = list(pageLength = 10, scrollX = TRUE),
+  rownames = FALSE,
+  caption = "Microstructure regression coefficients"
+)
+
+# Build page
+panels <- lapply(products, make_product_panel)
+page <- tagList(
+  tags$head(
+    tags$title("Round 1 Advanced Market Microstructure Dashboard"),
+    tags$style(HTML("body{font-family:Segoe UI,Arial,sans-serif;max-width:1600px;margin:0 auto;padding:20px;} h1{margin-bottom:8px;} .subtitle{color:#4d5d75;}"))
+  ),
+  h1("Round 1 Advanced Dashboard (R + Plotly)"),
+  p(class = "subtitle", "Built from generated CSVs in analysis_outputs. Early 20% region is highlighted for regime diagnostics."),
+  h2("Global tables"),
+  period_tbl,
+  tags$br(),
+  trend_tbl,
+  tags$br(),
+  micro_tbl,
+  tags$hr(),
+  panels
+)
+
+out_html <- file.path("advanced_dashboard_R.html")
+save_html(page, file = out_html)
+
+cat("R dashboard created:\n", out_html, "\n")
+

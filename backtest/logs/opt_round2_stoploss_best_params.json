@@ -1,0 +1,16 @@
+{
+  "strategy": "C:\\Users\\rajy7\\OneDrive\\Documents\\GitHub\\Imc_prosperity4_ISI_BSDS\\backtest\\strategies\\r2trader.py",
+  "data_dir": "C:\\Users\\rajy7\\OneDrive\\Documents\\GitHub\\Imc_prosperity4_ISI_BSDS\\backtest\\data",
+  "days": [
+    "2"
+  ],
+  "best_total_profit": 299965.0,
+  "best_ipr_profit": 238057.0,
+  "best_params": {
+    "STOPLOSS_IPR_DROP_TICKS": 35.0,
+    "STOPLOSS_UNWIND_FRACTION": 0.65,
+    "STOPLOSS_COOLDOWN_MS": 1500,
+    "STOPLOSS_CROSS_BUFFER_TICKS": 1.0,
+    "STOPLOSS_COOLDOWN_TARGET_FRACTION": 0.15
+  }
+}

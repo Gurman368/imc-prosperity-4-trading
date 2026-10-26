@@ -1,0 +1,20 @@
+{
+  "strategy": "C:\\Users\\rajy7\\OneDrive\\Documents\\GitHub\\Imc_prosperity4_ISI_BSDS\\backtest\\strategies\\r2trader.py",
+  "data_dir": "C:\\Users\\rajy7\\OneDrive\\Documents\\GitHub\\Imc_prosperity4_ISI_BSDS\\backtest\\data",
+  "days": [
+    "2"
+  ],
+  "best_total_profit": 300420.0,
+  "best_ipr_profit": 238057.0,
+  "best_params": {
+    "ACO_BASE_HALF_SPREAD": 2.0,
+    "ACO_AGGRESSIVE_TAKE_EDGE": 0.5,
+    "ACO_MOMENTUM_WEIGHT": 0.3,
+    "IPR_OBI_WEIGHT": 9.0,
+    "IPR_MICROPRICE_WEIGHT": 0.8,
+    "IPR_TREND_AGGRESSION": 1.8,
+    "IPR_DRIFT_TO_TARGET": 20.0,
+    "IPR_AGGRESSIVE_EDGE": 3.0,
+    "IPR_OVER_TARGET_TRIM": 20.0
+  }
+}
